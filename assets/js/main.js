@@ -1,5 +1,10 @@
 (function () {
+  const root = document.documentElement;
   const body = document.body;
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = themeToggle ? themeToggle.querySelector('.theme-icon') : null;
+  const themeText = themeToggle ? themeToggle.querySelector('.theme-text') : null;
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
   const navLinks = Array.from(document.querySelectorAll('.nav-link'));
@@ -9,13 +14,87 @@
   const copyEmailBtn = document.getElementById('copyEmailBtn');
   const contactForm = document.getElementById('contactForm');
   const year = document.getElementById('year');
+  const themeStorageKey = 'portfolio-theme';
 
   if (year) {
     year.textContent = new Date().getFullYear().toString();
   }
 
+  function preferredTheme() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      return 'light';
+    }
+    return 'dark';
+  }
+
+  function readSavedTheme() {
+    try {
+      const saved = localStorage.getItem(themeStorageKey);
+      if (saved === 'dark' || saved === 'light') {
+        return saved;
+      }
+    } catch (error) {
+      return null;
+    }
+    return null;
+  }
+
+  function writeSavedTheme(theme) {
+    try {
+      localStorage.setItem(themeStorageKey, theme);
+    } catch (error) {
+      // Local storage might be blocked; runtime switch still works.
+    }
+  }
+
+  function setThemeUI(theme) {
+    if (themeMeta) {
+      themeMeta.setAttribute('content', theme === 'light' ? '#f4f7ff' : '#070b1a');
+    }
+
+    if (!themeToggle || !themeIcon || !themeText) {
+      return;
+    }
+
+    const isLight = theme === 'light';
+    themeToggle.setAttribute('aria-pressed', String(isLight));
+    themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+    themeText.textContent = isLight ? 'Light' : 'Dark';
+
+    themeIcon.classList.remove('fa-sun', 'fa-moon');
+    themeIcon.classList.add(isLight ? 'fa-sun' : 'fa-moon');
+  }
+
+  function applyTheme(theme, persist) {
+    const nextTheme = theme === 'light' ? 'light' : 'dark';
+    root.setAttribute('data-theme', nextTheme);
+    setThemeUI(nextTheme);
+    if (persist) {
+      writeSavedTheme(nextTheme);
+    }
+  }
+
+  const activeTheme = root.getAttribute('data-theme');
+  if (activeTheme === 'dark' || activeTheme === 'light') {
+    setThemeUI(activeTheme);
+  } else {
+    const initTheme = readSavedTheme() || preferredTheme();
+    applyTheme(initTheme, false);
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      const currentTheme = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
+      applyTheme(nextTheme, true);
+    });
+  }
+
   // Mobile navigation toggle and close behaviors.
   function setNavState(isOpen) {
+    if (!navToggle) {
+      return;
+    }
     body.classList.toggle('nav-open', isOpen);
     navToggle.setAttribute('aria-expanded', String(isOpen));
     navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
