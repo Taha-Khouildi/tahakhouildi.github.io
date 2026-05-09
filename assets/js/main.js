@@ -293,7 +293,7 @@
       const emailField = document.getElementById('email');
       const subjectField = document.getElementById('subject');
       const messageField = document.getElementById('message');
-      const recipient = (copyEmailBtn && copyEmailBtn.getAttribute('data-email')) || '[your-email-here]';
+      const recipient = (copyEmailBtn && copyEmailBtn.getAttribute('data-email')) || 'taha@tahakhouildi.me';
 
       if (!nameField || !emailField || !subjectField || !messageField) {
         return;
