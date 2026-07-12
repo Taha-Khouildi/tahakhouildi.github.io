@@ -518,10 +518,22 @@ html[data-theme="light"] .project-card:focus-within {
 
 .project-head {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.6rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
   margin-bottom: 0.85rem;
+}
+
+.project-head h3 {
+  margin-bottom: 0;
+}
+
+.project-subtitle {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-soft);
 }
 
 .project-tag {

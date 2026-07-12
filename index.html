@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Taha Khouildi | Computer Science Student</title>
-  <meta name="description" content="Portfolio of Taha Khouildi, a Computer Science student at Esprit, Tunisia, seeking an internship and building practical software projects across the stack." />
-  <meta name="keywords" content="Taha Khouildi, Computer Science, Internship, Junior Developer, Symfony, PHP, MySQL, JavaScript, Tunisia" />
+  <meta name="description" content="Portfolio of Taha Khouildi, a Computer Science student at Esprit, Tunisia, seeking an internship and building practical projects across full-stack web, desktop applications, and network infrastructure." />
+  <meta name="keywords" content="Taha Khouildi, Computer Science, Internship, Junior Developer, Symfony, PHP, MySQL, JavaScript, Java, JavaFX, C++, Qt, Networking, Cisco, GNS3, Tunisia" />
   <meta name="author" content="Taha Khouildi" />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#070b1a" />
@@ -13,14 +13,14 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Taha Khouildi | Computer Science Student" />
-  <meta property="og:description" content="A computer science student seeking an internship, showcasing practical software projects, skills, and contact information." />
+  <meta property="og:description" content="A computer science student seeking an internship, showcasing practical projects across full-stack web, desktop applications, and network infrastructure." />
   <meta property="og:url" content="https://tahakhouildi.me" />
   <meta property="og:site_name" content="Taha Khouildi Portfolio" />
   <meta property="og:image" content="https://tahakhouildi.me/assets/profile.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Taha Khouildi | Computer Science Student" />
-  <meta name="twitter:description" content="Computer science student building practical full-stack web solutions with Symfony, PHP, MySQL, and JavaScript." />
+  <meta name="twitter:description" content="Computer science student building practical projects across full-stack web, desktop applications, and network infrastructure." />
   <meta name="twitter:image" content="https://tahakhouildi.me/assets/profile.jpg" />
 
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
@@ -170,7 +170,30 @@
               <span class="chip">JavaScript</span>
               <span class="chip">Python</span>
               <span class="chip">Java</span>
+              <span class="chip">C++</span>
               <span class="chip">SQL</span>
+            </div>
+          </article>
+
+          <article class="glass-card reveal">
+            <h3>Desktop</h3>
+            <div class="chip-wrap">
+              <span class="chip">JavaFX</span>
+              <span class="chip">Qt</span>
+              <span class="chip">Maven</span>
+            </div>
+          </article>
+
+          <article class="glass-card reveal">
+            <h3>Networking</h3>
+            <div class="chip-wrap">
+              <span class="chip">OSPF</span>
+              <span class="chip">VLSM</span>
+              <span class="chip">NAT</span>
+              <span class="chip">IPsec VPN</span>
+              <span class="chip">Cisco IOS</span>
+              <span class="chip">GNS3</span>
+              <span class="chip">pfSense</span>
             </div>
           </article>
 
@@ -239,12 +262,11 @@
         <div class="projects-grid">
           <article class="project-card reveal">
             <div class="project-head">
-              <h3>Startup Management Platform</h3>
-              <span class="project-tag">Full-Stack</span>
-              <span class="project-tag">University Team Project</span>
+              <h3>Cofounded — Startup &amp; Investor Platform</h3>
+              <span class="project-subtitle">Full-Stack University Team Project — built twice, in two stacks</span>
             </div>
             <p>
-              A Symfony web application for managing startup ideas, founder submissions, admin approval, analytics dashboards, comments, favorites, media uploads, and asynchronous processing.
+              A platform connecting early-stage startups with investors and co-founders. Founders publish structured pitches; investors browse, evaluate, and reach out. Built as both a Symfony web application and a JavaFX desktop client sharing the same domain model.
             </p>
             <div class="chip-wrap tech-chips">
               <span class="chip">Symfony</span>
@@ -255,28 +277,57 @@
               <span class="chip">JavaScript</span>
               <span class="chip">Chart.js</span>
               <span class="chip">Symfony Messenger</span>
+              <span class="chip">Java</span>
+              <span class="chip">JavaFX</span>
+              <span class="chip">Maven</span>
               <span class="chip">Git</span>
             </div>
-            <p class="contribution"><strong>My Contribution:</strong> Implemented startup CRUD features, admin approval workflow, dashboard analytics, comments, favorites, media handling, and async task processing.</p>
+            <p class="contribution"><strong>My Contribution:</strong> Owned the Startup module end to end in both versions — pitch CRUD, admin approval workflow, dashboard analytics, comments, favorites, media handling, async processing, and LLM-assisted pitch authoring (polish, sector/BMC suggestion, consistency audit).</p>
+            <div class="project-links">
+              <a href="https://github.com/Taha-Khouildi/Esprit-PIDEV-3A16-Cofounded-web" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Web (Symfony)</a>
+              <a href="https://github.com/Taha-Khouildi/Esprit-PIDEV-3A16-Cofounded-java" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Desktop (JavaFX)</a>
+            </div>
           </article>
 
           <article class="project-card reveal delay-1">
             <div class="project-head">
-              <h3>Virtual Museum Project</h3>
-              <span class="project-tag">Collaborative</span>
+              <h3>TechSolutions — Enterprise Network Infrastructure</h3>
+              <span class="project-subtitle">Academic Team Project — Projet Intégré Réseau</span>
             </div>
             <p>
-              A collaborative virtual museum experience focused on sustainable cities and communities, designed to present educational content in an interactive digital environment.
+              Design and deployment of a hierarchical enterprise network for a four-department company, simulated end to end in GNS3 with Cisco IOS routers and a pfSense firewall.
             </p>
             <div class="chip-wrap tech-chips">
-              <span class="chip">Spatial / 3D Tools</span>
-              <span class="chip">Web Research</span>
-              <span class="chip">Presentation Design</span>
+              <span class="chip">GNS3</span>
+              <span class="chip">Cisco IOS</span>
+              <span class="chip">OSPF</span>
+              <span class="chip">VLSM</span>
+              <span class="chip">NAT</span>
+              <span class="chip">IPsec/ISAKMP</span>
+              <span class="chip">pfSense</span>
             </div>
-            <p class="contribution"><strong>My Contribution:</strong> Helped structure museum rooms, selected digital assets, prepared SDG-related content, and organized the visitor experience.</p>
+            <p class="contribution"><strong>My Contribution:</strong> Designed and built the network backbone — VLSM addressing plan, OSPF area 0 across all backbone routers, NAT overload at the internet edge, site-to-site IPsec VPN, and the GNS3 topology itself.</p>
             <div class="project-links">
-              <!-- Replace # with project repository URL if available -->
-              <a href="#" class="btn btn-secondary" aria-disabled="true">GitHub (Optional)</a>
+              <a href="https://github.com/Taha-Khouildi/GNS3_pi_3A" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal delay-2">
+            <div class="project-head">
+              <h3>ConsultIQ</h3>
+              <span class="project-subtitle">C++ / Qt Desktop Application</span>
+            </div>
+            <p>
+              A Windows desktop application for managing a consulting firm — clients, appointments, projects, invoicing, staff, and reporting — built with Qt 6 and C++17 on a SQL backend via ODBC.
+            </p>
+            <div class="chip-wrap tech-chips">
+              <span class="chip">C++</span>
+              <span class="chip">Qt</span>
+              <span class="chip">Desktop GUI</span>
+            </div>
+            <p class="contribution"><strong>My Contribution:</strong> Built the Client Management module — the Client entity and its data layer (add, list, delete, update) backed by QSqlQueryModel, the add-client dialog, and the client list view with row selection and confirmation dialogs.</p>
+            <div class="project-links">
+              <a href="https://github.com/Taha-Khouildi/ConsultIQ-gui-project-desktop-app" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </article>
         </div>
