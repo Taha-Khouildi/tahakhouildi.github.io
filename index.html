@@ -122,7 +122,7 @@
 
         <div class="hero-image-card reveal delay-1" role="img" aria-label="Profile image card for Taha Khouildi">
           <!-- Replace with your real image at assets/profile.jpg -->
-          <img src="assets/profile.jpg" alt="Portrait placeholder for Taha Khouildi" loading="eager" onerror="this.style.display='none'; this.parentElement.classList.add('fallback');" />
+          <img src="assets/profile.jpg" alt="Taha Khouildi" loading="eager" onerror="this.style.display='none'; this.parentElement.classList.add('fallback');" />
           <div class="img-fallback" aria-hidden="true">
             <i class="fa-solid fa-user"></i>
             <span>Profile Photo</span>
@@ -259,75 +259,143 @@
     <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="container">
         <h2 class="section-title reveal" id="projects-title">Projects</h2>
-        <div class="projects-grid">
-          <article class="project-card reveal">
-            <div class="project-head">
+        <div class="feature-rows">
+          <article class="feature-row reveal">
+            <div class="feature-media">
+              <div class="browser-frame">
+                <div class="browser-bar" aria-hidden="true">
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                </div>
+                <div class="browser-viewport">
+                  <!-- Add screenshot at assets/projects/startup-platform.png -->
+                  <img src="assets/projects/startup-platform.png" alt="Screenshot of the Cofounded startup and investor platform" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('fallback');" />
+                  <div class="media-fallback" aria-hidden="true">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Screenshot coming soon</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="feature-content">
               <h3>Cofounded — Startup &amp; Investor Platform</h3>
               <span class="project-subtitle">Full-Stack University Team Project — built twice, in two stacks</span>
-            </div>
-            <p>
-              A platform connecting early-stage startups with investors and co-founders. Founders publish structured pitches; investors browse, evaluate, and reach out. Built as both a Symfony web application and a JavaFX desktop client sharing the same domain model.
-            </p>
-            <div class="chip-wrap tech-chips">
-              <span class="chip">Symfony</span>
-              <span class="chip">PHP</span>
-              <span class="chip">MySQL</span>
-              <span class="chip">Doctrine</span>
-              <span class="chip">Twig</span>
-              <span class="chip">JavaScript</span>
-              <span class="chip">Chart.js</span>
-              <span class="chip">Symfony Messenger</span>
-              <span class="chip">Java</span>
-              <span class="chip">JavaFX</span>
-              <span class="chip">Maven</span>
-              <span class="chip">Git</span>
-            </div>
-            <p class="contribution"><strong>My Contribution:</strong> Owned the Startup module end to end in both versions — pitch CRUD, admin approval workflow, dashboard analytics, comments, favorites, media handling, async processing, and LLM-assisted pitch authoring (polish, sector/BMC suggestion, consistency audit).</p>
-            <div class="project-links">
-              <a href="https://github.com/Taha-Khouildi/Esprit-PIDEV-3A16-Cofounded-web" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Web (Symfony)</a>
-              <a href="https://github.com/Taha-Khouildi/Esprit-PIDEV-3A16-Cofounded-java" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Desktop (JavaFX)</a>
+              <p class="feature-hook">A platform where early-stage founders publish structured pitches and investors browse, evaluate, and reach out to the teams they want to back.</p>
+              <div class="chip-wrap tech-chips">
+                <span class="chip">Symfony</span>
+                <span class="chip">PHP</span>
+                <span class="chip">MySQL</span>
+                <span class="chip">Chart.js</span>
+                <span class="chip">JavaFX</span>
+              </div>
+              <ul class="outcome-list">
+                <li>Owned the Startup module end to end across both the Symfony web app and the JavaFX desktop client, keeping a shared domain model in sync.</li>
+                <li>Built the pitch lifecycle — CRUD plus an admin approval workflow — and a Chart.js dashboard surfacing pitch analytics.</li>
+                <li>Added LLM-assisted pitch authoring (draft polish, sector/BMC suggestions, and a consistency audit), backed by async processing for the heavier steps.</li>
+              </ul>
+              <div class="project-links">
+                <!-- TODO: add URL -->
+                <button type="button" class="btn btn-primary" disabled aria-label="Live demo not available yet">Live Demo</button>
+                <a href="https://github.com/Taha-Khouildi/Esprit-PIDEV-3A16-Cofounded-web" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  Source (Web)
+                </a>
+                <a href="https://github.com/Taha-Khouildi/Esprit-PIDEV-3A16-Cofounded-java" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  Source (Desktop)
+                </a>
+              </div>
             </div>
           </article>
 
-          <article class="project-card reveal delay-1">
-            <div class="project-head">
+          <article class="feature-row feature-row--reverse reveal">
+            <div class="feature-media">
+              <div class="browser-frame">
+                <div class="browser-bar" aria-hidden="true">
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                </div>
+                <div class="browser-viewport">
+                  <!-- Add screenshot at assets/projects/techsolutions-network.png -->
+                  <img src="assets/projects/techsolutions-network.png" alt="GNS3 topology diagram of the TechSolutions enterprise network" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('fallback');" />
+                  <div class="media-fallback" aria-hidden="true">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Screenshot coming soon</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="feature-content">
               <h3>TechSolutions — Enterprise Network Infrastructure</h3>
               <span class="project-subtitle">Academic Team Project — Projet Intégré Réseau</span>
-            </div>
-            <p>
-              Design and deployment of a hierarchical enterprise network for a four-department company, simulated end to end in GNS3 with Cisco IOS routers and a pfSense firewall.
-            </p>
-            <div class="chip-wrap tech-chips">
-              <span class="chip">GNS3</span>
-              <span class="chip">Cisco IOS</span>
-              <span class="chip">OSPF</span>
-              <span class="chip">VLSM</span>
-              <span class="chip">NAT</span>
-              <span class="chip">IPsec/ISAKMP</span>
-              <span class="chip">pfSense</span>
-            </div>
-            <p class="contribution"><strong>My Contribution:</strong> Designed and built the network backbone — VLSM addressing plan, OSPF area 0 across all backbone routers, NAT overload at the internet edge, site-to-site IPsec VPN, and the GNS3 topology itself.</p>
-            <div class="project-links">
-              <a href="https://github.com/Taha-Khouildi/GNS3_pi_3A" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <p class="feature-hook">A hierarchical enterprise network for a four-department company, designed and simulated end to end in GNS3 with Cisco IOS routers and a pfSense firewall.</p>
+              <div class="chip-wrap tech-chips">
+                <span class="chip">GNS3</span>
+                <span class="chip">Cisco IOS</span>
+                <span class="chip">OSPF</span>
+                <span class="chip">VLSM</span>
+                <span class="chip">IPsec VPN</span>
+              </div>
+              <ul class="outcome-list">
+                <li>Designed the VLSM addressing plan and ran OSPF area 0 across every backbone router to connect the four departments.</li>
+                <li>Configured NAT overload at the internet edge and a site-to-site IPsec VPN between locations.</li>
+                <li>Built the full GNS3 topology to simulate and validate the design end to end.</li>
+              </ul>
+              <div class="project-links">
+                <!-- TODO: add URL -->
+                <button type="button" class="btn btn-primary" disabled aria-label="Live demo not available yet">Live Demo</button>
+                <a href="https://github.com/Taha-Khouildi/GNS3_pi_3A" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  Source Code
+                </a>
+              </div>
             </div>
           </article>
 
-          <article class="project-card reveal delay-2">
-            <div class="project-head">
+          <article class="feature-row reveal">
+            <div class="feature-media">
+              <div class="browser-frame">
+                <div class="browser-bar" aria-hidden="true">
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                </div>
+                <div class="browser-viewport">
+                  <!-- Add screenshot at assets/projects/consultiq.png -->
+                  <img src="assets/projects/consultiq.png" alt="Screenshot of the ConsultIQ consulting-firm desktop application" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('fallback');" />
+                  <div class="media-fallback" aria-hidden="true">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Screenshot coming soon</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="feature-content">
               <h3>ConsultIQ</h3>
               <span class="project-subtitle">C++ / Qt Desktop Application</span>
-            </div>
-            <p>
-              A Windows desktop application for managing a consulting firm — clients, appointments, projects, invoicing, staff, and reporting — built with Qt 6 and C++17 on a SQL backend via ODBC.
-            </p>
-            <div class="chip-wrap tech-chips">
-              <span class="chip">C++</span>
-              <span class="chip">Qt</span>
-              <span class="chip">Desktop GUI</span>
-            </div>
-            <p class="contribution"><strong>My Contribution:</strong> Built the Client Management module — the Client entity and its data layer (add, list, delete, update) backed by QSqlQueryModel, the add-client dialog, and the client list view with row selection and confirmation dialogs.</p>
-            <div class="project-links">
-              <a href="https://github.com/Taha-Khouildi/ConsultIQ-gui-project-desktop-app" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <p class="feature-hook">A Windows desktop app for running a consulting firm — clients, appointments, projects, invoicing, staff, and reporting — built with Qt 6 and C++17 on a SQL backend via ODBC.</p>
+              <div class="chip-wrap tech-chips">
+                <span class="chip">C++17</span>
+                <span class="chip">Qt 6</span>
+                <span class="chip">SQL</span>
+                <span class="chip">ODBC</span>
+                <span class="chip">QSqlQueryModel</span>
+              </div>
+              <ul class="outcome-list">
+                <li>Built the Client Management module: the Client entity and a full add/list/update/delete data layer backed by QSqlQueryModel.</li>
+                <li>Implemented the add-client dialog and the client list view with row selection.</li>
+                <li>Wired confirmation dialogs into destructive actions to guard against accidental deletes.</li>
+              </ul>
+              <div class="project-links">
+                <!-- TODO: add URL -->
+                <button type="button" class="btn btn-primary" disabled aria-label="Live demo not available yet">Live Demo</button>
+                <a href="https://github.com/Taha-Khouildi/ConsultIQ-gui-project-desktop-app" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  Source Code
+                </a>
+              </div>
             </div>
           </article>
         </div>
