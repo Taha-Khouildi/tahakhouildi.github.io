@@ -197,6 +197,11 @@ ul.bullets li::marker {
   margin: 0 0 1pt;
 }
 
+/* Space stacked entries in the side column (e.g. a second certification) */
+.side-text + .side-strong {
+  margin-top: 5pt;
+}
+
 /* ---------- Print: light, ink-friendly, one A4 page ---------- */
 @page {
   size: A4;
