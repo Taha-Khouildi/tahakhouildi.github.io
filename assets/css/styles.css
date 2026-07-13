@@ -548,6 +548,12 @@ html[data-theme="light"] .project-card:focus-within {
   color: var(--text-soft);
 }
 
+/* Date/meta line under a heading inside a glass card (e.g. Experience) */
+.glass-card .project-subtitle {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
 .project-tag {
   border-radius: 999px;
   padding: 0.26rem 0.65rem;
