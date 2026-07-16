@@ -1,18 +1,15 @@
-/* CV stylesheet. Reuses the design tokens from styles.css.
-   Screen: dark theme, matching the site. Print: light, ink-friendly A4. */
+/* CV stylesheet. Reuses the Geist design tokens from styles.css.
+   Screen: light canvas, matching the site. Print: ink-friendly A4. */
 
 :root {
-  --bg-main: #070b1a;
-  --text-main: #eef4ff;
-  --text-soft: #b2c0e6;
-  --border: rgba(160, 189, 255, 0.24);
-  --accent-a: #3a63ff;
-  --accent-b: #00c2ff;
-  --accent-c: #8256ff;
-  --chip-bg: rgba(255, 255, 255, 0.04);
-  --chip-border: rgba(176, 199, 255, 0.28);
-  --sheet-bg: #0d1328;
-  --shadow: 0 20px 60px rgba(3, 8, 24, 0.45);
+  --bg-main: #fafafa;
+  --text-main: #171717;
+  --text-soft: #4d4d4d;
+  --border: #ebebeb;
+  --link: #0070f3;
+  --chip-bg: #ffffff;
+  --sheet-bg: #ffffff;
+  --shadow: 0px 2px 2px rgba(0, 0, 0, 0.04), 0px 8px 16px -4px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -22,7 +19,7 @@
 body {
   margin: 0;
   padding: 24px 12px;
-  font-family: "Manrope", sans-serif;
+  font-family: "Geist", "Inter", Arial, sans-serif;
   background: var(--bg-main);
   color: var(--text-main);
   line-height: 1.38;
@@ -41,28 +38,25 @@ body {
 
 /* Header */
 .cv-name {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Geist", "Inter", Arial, sans-serif;
   font-size: 23pt;
-  font-weight: 700;
-  letter-spacing: 0.4px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   margin: 0;
 }
 
 .cv-role {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Geist", "Inter", Arial, sans-serif;
   font-size: 10.5pt;
   font-weight: 500;
-  color: var(--accent-b);
+  color: var(--text-soft);
   margin: 2pt 0 0;
 }
 
 .rule {
-  height: 2.5px;
+  height: 1px;
   margin: 7pt 0;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent-a), var(--accent-b), var(--accent-c));
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
+  background: var(--border);
 }
 
 .contact {
@@ -83,12 +77,12 @@ body {
 
 /* Sections */
 .section-label {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Geist Mono", "JetBrains Mono", ui-monospace, monospace;
   font-size: 8.6pt;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--accent-b);
+  letter-spacing: 0.02em;
+  color: #8f8f8f;
   margin: 0 0 4pt;
   padding-bottom: 2.5pt;
   border-bottom: 1px solid var(--border);
@@ -131,7 +125,7 @@ body {
 }
 
 .entry-title {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Geist", "Inter", Arial, sans-serif;
   font-size: 9.6pt;
   font-weight: 600;
   margin: 0;
@@ -139,7 +133,7 @@ body {
 
 .entry-meta {
   font-size: 8.5pt;
-  color: var(--accent-b);
+  color: var(--link);
   margin: 1pt 0 3pt;
 }
 
@@ -161,7 +155,7 @@ ul.bullets li {
 }
 
 ul.bullets li::marker {
-  color: var(--accent-b);
+  color: #a1a1a1;
 }
 
 /* Skills */
@@ -175,7 +169,7 @@ ul.bullets li::marker {
 
 .skill-head {
   font-size: 8.6pt;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 0 2pt;
 }
 
@@ -202,7 +196,7 @@ ul.bullets li::marker {
   margin-top: 5pt;
 }
 
-/* ---------- Print: light, ink-friendly, one A4 page ---------- */
+/* ---------- Print: ink-friendly, one A4 page ---------- */
 @page {
   size: A4;
   margin: 12mm;
@@ -210,10 +204,10 @@ ul.bullets li::marker {
 
 @media print {
   :root {
-    --text-main: #111a32;
-    --text-soft: #33405f;
-    --border: rgba(70, 105, 188, 0.35);
-    --accent-b: #0b63a6;
+    --text-main: #171717;
+    --text-soft: #333333;
+    --border: #d9d9d9;
+    --link: #0761d1;
   }
 
   body {

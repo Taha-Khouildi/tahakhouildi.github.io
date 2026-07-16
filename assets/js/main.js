@@ -21,10 +21,10 @@
   }
 
   function preferredTheme() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      return 'light';
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
     }
-    return 'dark';
+    return 'light';
   }
 
   function readSavedTheme() {
@@ -49,7 +49,7 @@
 
   function setThemeUI(theme) {
     if (themeMeta) {
-      themeMeta.setAttribute('content', theme === 'light' ? '#f4f7ff' : '#070b1a');
+      themeMeta.setAttribute('content', theme === 'dark' ? '#000000' : '#fafafa');
     }
 
     if (!themeToggle || !themeIcon || !themeText) {
